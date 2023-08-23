@@ -12,7 +12,7 @@ function config (options = {}) {
     envLines.split('\n').forEach(line => {
       const [key, value] = line.split('=')
 
-      process.env[key] = value.replaceAll('"', '')
+      process.env[key] = value.replaceAll('"', '').trim()
     })
   }
 }
